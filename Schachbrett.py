@@ -73,6 +73,16 @@ x, y, w, h = roi
 dst = dst[y:y+h, x:x+w]
 cv2.imwrite('caliResult1.jpg', dst)
 
+f = open(r"C:\Users\loren\OneDrive\Bachelorarbeit\praktischer teil\Testdurchlauf\Kamera1\Kal1.txt","w")
+f.write('CameraMatrix:\n'+str(cameraMatrix),)
+f.write('\n')
+f.write('newCameraMatrix:\n'+str(newCameraMatrix),)
+f.write('\n')
+f.write('distCoeff:\n'+str(distCoeff),)
+f.write('\n')
+f.close()
+
+
 
 ##Ausgabe des Fehlers
 mean_error = 0
